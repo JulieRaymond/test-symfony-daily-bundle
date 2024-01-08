@@ -32,6 +32,9 @@
             <h1>Comments</h1>
             <ul id="comments">
                 {# @todo display comments if any #}
+                {% for comment in article.comments %}
+                    <li>{{ comment.content }}</li>
+                {% endfor %}
             </ul>
             <h2>Leave your comment</h2>
             {{ form(form) }}
